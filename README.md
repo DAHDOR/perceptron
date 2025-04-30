@@ -1,6 +1,6 @@
-# Perceptrón
+# Perceptron
 
-Este proyecto implementa un perceptrón en Python con una interfaz gráfica sencilla basada en CustomTkinter.
+Este proyecto universitario implementa un perceptrón en Python con una interfaz gráfica sencilla basada en CustomTkinter.
 
 ## Instrucciones
 
@@ -15,6 +15,7 @@ Este proyecto implementa un perceptrón en Python con una interfaz gráfica senc
     pip install .
     ```
 
+    O, usando `uv`:
     ```bash
     uv sync
     ```
@@ -24,6 +25,11 @@ Este proyecto implementa un perceptrón en Python con una interfaz gráfica senc
 Para ejecutar la aplicación, abre una terminal y ejecuta:
 ```bash
 python main.py
+```
+
+O, usando `uv`:
+```bash
+uv run main.py
 ```
 
 Esto abrirá la ventana principal de la interfaz del perceptrón, donde podrás interactuar con el modelo.
@@ -40,10 +46,6 @@ Las pruebas unitarias de la implementación del perceptrón se encuentran en el 
 ```bash
 pytest tests/test_perceptron.py
 ```
-
-## Contribuciones
-
-¡Las contribuciones son bienvenidas! Por favor, abre un issue o envía un pull request para sugerir mejoras o corregir errores.
 
 ## Licencia
 

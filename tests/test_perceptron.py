@@ -1,27 +1,31 @@
-import unittest as ut
+import numpy as np
+import pytest
 from perceptron import Perceptron
 
-class TestPerceptron(ut.TestCase):
+def test_sum_and_step():
+    weights = np.array([1.0, -1.0, 0.5])
+    bias = 0.2
+    p = Perceptron(n=3, bias=bias, weights=weights)
+    inputs = np.array([2.0, 1.0, -1.0])
+    # sum = 2*1 + 1*-1 + (-1)*0.5 + 0.2 = 2 - 1 - 0.5 + 0.2 = 0.7
+    assert p.sum(inputs) == pytest.approx(0.7)
+    # step activation
+    assert p.step(0.7) == 1
+    assert p.step(0.0) == 0
+    assert p.step(-0.1) == 0
 
-    def setUp(self):
-        self.perceptron = Perceptron(input_size=2, learning_rate=0.1)
+def test_linear():
+    p = Perceptron(n=1)
+    assert p.linear(2.0, 3.0, -1.0) == pytest.approx(2.0 * 3.0 + -1.0)
 
-    def test_initial_weights(self):
-        weights = self.perceptron.weights
-        self.assertEqual(len(weights), 2)
-        self.assertTrue(all(weight == 0 for weight in weights))
-
-    def test_training(self):
-        training_data = [[0, 0], [0, 1], [1, 0], [1, 1]]
-        labels = [0, 0, 0, 1]
-        self.perceptron.train(training_data, labels, epochs=10)
-        predictions = [self.perceptron.predict(data) for data in training_data]
-        self.assertEqual(predictions, labels)
-
-    def test_prediction(self):
-        self.perceptron.weights = [0.5, -0.5]  # Setting weights for testing
-        prediction = self.perceptron.predict([1, 1])
-        self.assertEqual(prediction, 1)
-
-if __name__ == '__main__':
-    ut.main()
+def test_sigmoid_and_tanh():
+    p = Perceptron(n=1)
+    # sigmoid at 0
+    assert p.sigmoid(0.0) == pytest.approx(0.5)
+    # extreme values
+    assert p.sigmoid(100) > 0.99
+    assert p.sigmoid(-100) < 0.01
+    # tanh
+    assert p.tanh(0.0) == pytest.approx(0.0)
+    assert p.tanh(2.0) == pytest.approx(np.tanh(2.0))
+    assert p.tanh(-2.0) == pytest.approx(np.tanh(-2.0))

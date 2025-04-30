@@ -1,2 +1,3 @@
 from .perceptron import Perceptron
-__all__ = ["Perceptron"]
+from .activation_functions import step, linear, sigmoid, tanh
+__all__ = ["Perceptron", "step", "linear", "sigmoid", "tanh"]
