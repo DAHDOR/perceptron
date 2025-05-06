@@ -1,9 +1,8 @@
 def main():
-    from ui.main_window import MainWindow
+    from ui.app import App
     import customtkinter as ctk
 
-    app = ctk.CTk()
-    MainWindow(app)
+    app = App()
     app.mainloop()
 
 

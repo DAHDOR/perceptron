@@ -1,6 +1,6 @@
 import numpy as np
 import pytest
-from perceptron import Perceptron
+from model import Perceptron
 
 def test_sum_and_step():
     weights = np.array([1.0, -1.0, 0.5])
