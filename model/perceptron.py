@@ -1,7 +1,7 @@
 import numpy as np
 
 class Perceptron:
-    def __init__(self, n: int, bias: int = 0, weights: np.ndarray = None) -> None:
+    def __init__(self, n: int = 1, bias: int = 0, weights: np.ndarray = None) -> None:
         self.n = n
         self.bias = bias
         self.weights = np.random.rand(n) if weights is None else weights
