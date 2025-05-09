@@ -8,7 +8,7 @@ Este proyecto universitario implementa un perceptrón en Python con una interfaz
 
 1. Clona el repositorio:
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
+    git clone https://github.com/DAHDOR/perceptron.git
     cd perceptron
     ```
 
