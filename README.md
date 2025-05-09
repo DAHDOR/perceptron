@@ -36,6 +36,8 @@ uv run main.py
 
 Esto abrirá la ventana principal de la interfaz del perceptrón, donde podrás interactuar con el modelo.
 
+Toma en cuenta que al estar llenando una celda, debes presionar enter o salir del foco de la celda para que tu entrada por teclado sea aplicada.
+
 ## Características
 
 - Interfaz de usuario basada en CustomTkinter para una interacción intuitiva.

@@ -33,6 +33,10 @@ class App:
         )
 
         if path:
+            self.init_weights(path)
+
+    def init_weights(self, path):
+        if path:
             try:
                 weights = np.loadtxt(path, delimiter=',')
                 self.perceptron.set_weights(weights)

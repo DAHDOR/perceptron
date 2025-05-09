@@ -28,3 +28,5 @@ class UI(ctk.CTk):
         
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(1, weight=1)
+
+        self.app.init_weights("weights.txt")
