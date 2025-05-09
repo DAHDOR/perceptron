@@ -1,3 +1,4 @@
-from .app import App
+from .ui import UI
 
-__all__ = ["App"]
+
+__all__ = ["UI"]

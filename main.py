@@ -1,9 +1,8 @@
-def main():
-    from ui.app import App
-    import customtkinter as ctk
+from view import UI
 
-    app = App()
-    app.mainloop()
+def main():
+    ui = UI()
+    ui.mainloop()
 
 
 if __name__ == "__main__":
