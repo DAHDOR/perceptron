@@ -46,4 +46,4 @@ Toma en cuenta que al estar llenando una celda, debes presionar enter o salir de
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo la Licencia GPL-3.0. Consulta el archivo LICENSE para más detalles.
