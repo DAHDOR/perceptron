@@ -1,6 +1,8 @@
-# Perceptron
+# Perceptrón
 
 Este proyecto universitario implementa un perceptrón en Python con una interfaz gráfica sencilla basada en CustomTkinter.
+
+**Autor**: Diego Hernández
 
 ## Instrucciones
 
@@ -37,15 +39,8 @@ Esto abrirá la ventana principal de la interfaz del perceptrón, donde podrás 
 ## Características
 
 - Interfaz de usuario basada en CustomTkinter para una interacción intuitiva.
-- Implementación del algoritmo del perceptrón para clasificación binaria.
-- Widgets personalizados para entrada de datos y visualización de resultados.
-
-## Pruebas
-
-Las pruebas unitarias de la implementación del perceptrón se encuentran en el directorio `tests`. Para ejecutarlas, usa:
-```bash
-pytest tests/test_perceptron.py
-```
+- Implementación del algoritmo del perceptrón.
+- Carga de configuración a través de TXT o a través de la interfaz de usuario.
 
 ## Licencia
 
